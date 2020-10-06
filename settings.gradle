@@ -1,0 +1,3 @@
+include ':ripple'
+include ':app'
+rootProject.name = "Ripple"
