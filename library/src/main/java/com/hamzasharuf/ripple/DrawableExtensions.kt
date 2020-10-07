@@ -15,7 +15,7 @@ fun ImageView.setImageType(type: Enum<*>, @ColorInt tintColor: Int = 0) {
 
 
 
-fun Drawable.setColorFilter(color: Int, mode: Mode = Mode.SRC_ATOP) {
+fun Drawable.setImageColorFilter(color: Int, mode: Mode = Mode.SRC_ATOP) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
         colorFilter = BlendModeColorFilter(color, mode.getBlendMode())
     } else {

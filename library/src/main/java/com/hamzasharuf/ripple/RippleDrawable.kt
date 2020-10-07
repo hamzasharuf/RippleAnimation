@@ -56,7 +56,7 @@ object RippleDrawable {
             drawable = drawable.mutate()
         }
         if (tintColor != 0) {
-            drawable.setColorFilter(tintColor, PorterDuff.Mode.SRC_IN)
+            drawable.setImageColorFilter(tintColor, Mode.SRC_IN)
             imageView.setTag(R.id.eavd_current_tint_color, tintColor)
         }
 
@@ -132,13 +132,6 @@ object RippleDrawable {
             .addAnimatedVectorDrawable(downDrawableType, upArrowDrawableType, R.drawable.avd_down_arrow_to_up_arrow)
             .addAnimatedVectorDrawable(downDrawableType, rightDrawableType, R.drawable.avd_down_arrow_to_right_arrow)
             .build()
-    }
-
-    enum class Type {
-
-        PLAY, PAUSE, STOP, CLOSE,
-        LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW
-
     }
 
 }
