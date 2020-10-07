@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="eavd_current_type" type="id"/>
+    <item name="eavd_current_tint_color" type="id"/>
+
+</resources>
