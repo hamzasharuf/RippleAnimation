@@ -100,11 +100,15 @@ object RippleDrawable {
         val stopDrawableType = RippleDrawableConfig.DrawableType(Type.STOP, R.drawable.eavd_vd_stop)
 
         val closeDrawableType = RippleDrawableConfig.DrawableType(Type.CLOSE, R.drawable.eavd_close)
+        val checkDrawableType = RippleDrawableConfig.DrawableType(Type.CHECK, R.drawable.eavd_check)
 
         val leftArrowDrawableType = RippleDrawableConfig.DrawableType(Type.LEFT_ARROW, R.drawable.eavd_vd_left_arrow)
         val upArrowDrawableType = RippleDrawableConfig.DrawableType(Type.UP_ARROW, R.drawable.eavd_vd_up_arrow)
         val rightDrawableType = RippleDrawableConfig.DrawableType(Type.RIGHT_ARROW, R.drawable.eavd_vd_right_arrow)
         val downDrawableType = RippleDrawableConfig.DrawableType(Type.DOWN_ARROW, R.drawable.eavd_vd_down_arrow)
+
+        val thumbUpDrawableType = RippleDrawableConfig.DrawableType(Type.THUMB_UP, R.drawable.eavd_thumb_up)
+        val thumbDownDrawableType = RippleDrawableConfig.DrawableType(Type.THUMB_DOWN, R.drawable.eavd_thumb_down)
 
         return RippleDrawableConfig.Builder()
             // Play, Pause, Stop
@@ -115,8 +119,13 @@ object RippleDrawable {
             .addAnimatedVectorDrawable(stopDrawableType, playDrawableType, R.drawable.avd_stop_to_play)
             .addAnimatedVectorDrawable(stopDrawableType, pauseDrawableType, R.drawable.avd_stop_to_pause)
 
-//            .addAnimatedVectorDrawable(closeDrawableType, downDrawableType, R.drawable.avd_close_to_down)
-//            .addAnimatedVectorDrawable(downDrawableType, closeDrawableType, R.drawable.avd_down_to_close)
+            .addAnimatedVectorDrawable(closeDrawableType, checkDrawableType, R.drawable.avd_close_to_check)
+            .addAnimatedVectorDrawable(checkDrawableType, closeDrawableType, R.drawable.avd_check_to_close)
+            .addAnimatedVectorDrawable(closeDrawableType, downDrawableType, R.drawable.avd_close_to_down)
+            .addAnimatedVectorDrawable(downDrawableType, closeDrawableType, R.drawable.avd_down_to_close)
+
+            .addAnimatedVectorDrawable(thumbUpDrawableType, thumbDownDrawableType, R.drawable.avd_thumb_up_to_thumb_down)
+            .addAnimatedVectorDrawable(thumbDownDrawableType, thumbUpDrawableType, R.drawable.avd_thumb_down_to_thumb_up)
 
             // Left arrow, Top arrow, Right arrow, Bottom arrow
             .addAnimatedVectorDrawable(leftArrowDrawableType, upArrowDrawableType, R.drawable.avd_left_arrow_to_up_arrow)

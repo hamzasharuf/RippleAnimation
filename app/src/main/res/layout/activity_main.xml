@@ -92,4 +92,46 @@
         app:layout_constraintStart_toEndOf="@+id/button_pause"
         app:layout_constraintTop_toTopOf="@+id/button_play" />
 
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        app:layout_constraintEnd_toStartOf="@+id/button_thumb_up"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_check"
+        app:layout_constraintTop_toTopOf="@+id/button_check" />
+
+    <Button
+        android:id="@+id/button_thumb_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thumb Up"
+        app:layout_constraintEnd_toStartOf="@+id/button_thumb_down"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_close"
+        app:layout_constraintTop_toTopOf="@+id/button_check" />
+
+    <Button
+        android:id="@+id/button_thumb_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thumb Down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_thumb_up"
+        app:layout_constraintTop_toTopOf="@+id/button_check" />
+
+    <Button
+        android:id="@+id/button_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Check"
+        app:layout_constraintEnd_toStartOf="@+id/button_close"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_play" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
